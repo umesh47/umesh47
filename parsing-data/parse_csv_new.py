@@ -20,7 +20,12 @@ class ParseCSVTest(unittest.TestCase):
         self. assertEqual(read_data(self.data)[1][7],'87')
 
     def test_get_min_score_difference(self):
-        self.assertEqual(get_min_score_difference(parsed_data),"no idea")
+        parsed_data = [
+           ['Team', 'Games', 'Wins', 'Losses', 'Draws', 'Goals', 'Goals Allowed', 'Points'],
+           ['Arsenal', '38', '26', '9', '3', '79', '36', '87'],
+           ['Liverpool', '38', '24', '8', '6', '67', '30', '80']
+        ]
+        self.assertEqual(get_min_score_difference(parsed_data),37.0)
 
 
 if __name__=='__main__':
