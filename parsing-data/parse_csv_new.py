@@ -1,5 +1,5 @@
 import unittest
-from parse_csv_1 import read_data, #get_min_score_difference
+from parse_csv_1 import read_data, get_min_score_difference
 
 
 class ParseCSVTest(unittest.TestCase):
@@ -19,8 +19,8 @@ class ParseCSVTest(unittest.TestCase):
     def test_csv_read_data_points(self):
         self. assertEqual(read_data(self.data)[1][7],'87')
 
-    #def test_get_min_score_difference(self):
-    #    self.assertEqual(get_min_score_difference(parsed_data),"no idea")
+    def test_get_min_score_difference(self):
+        self.assertEqual(get_min_score_difference(parsed_data),"no idea")
 
 
 if __name__=='__main__':
